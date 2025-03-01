@@ -63,6 +63,7 @@ MIT © [dmike16](./LICENSE)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+[license-shield]: https://img.shields.io/github/license/dmike16/nvim-config.svg?style=for-the-badge
 [license-url]: https://github.com/dmike16/nvim-config/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/michele-cipolla
