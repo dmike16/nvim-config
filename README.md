@@ -24,7 +24,6 @@
 </div>
 
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -42,7 +41,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
- 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
