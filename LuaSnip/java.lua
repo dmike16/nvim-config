@@ -11,9 +11,9 @@ local function pkg_name(_, parent, source)
     return string.gsub(dot_path_no_source, "%." .. env.TM_FILENAME, "")
 end
 
-local function class_name(_, parent, _)
+local function class_name(_, parent, jtype)
     local env = parent.snippet.env
-    return env.TM_FILENAME_BASE
+    return jtype .. " " .. env.TM_FILENAME_BASE
 end
 
 return {
@@ -31,8 +31,8 @@ return {
     s(
         { trig = 'pclass', name = "publiclass" }
         , {
-            t("public class ")
-            , f(class_name)
+            t("public ")
+            , f(class_name, {}, { user_args = { "class" } })
         , t("{")
         , i(1)
         , t("}")
@@ -41,11 +41,21 @@ return {
     , s(
     { trig = 'pinterface', name = "publicinterface" }
     , {
-        t("public interface ")
-        , f(class_name)
+        t("public ")
+        , f(class_name, {}, { user_args = { "interface" } })
     , t("{")
     , i(1)
     , t("}")
-    }
-)
+    })
+, s(
+    { trig = 'precord', name = "publicrecord" }
+    , {
+        t("public ")
+        , f(class_name, {}, { user_args = { "record" } })
+    , t("()")
+    , t("{")
+    , i(1)
+    , t("}")
+    })
+
 }
