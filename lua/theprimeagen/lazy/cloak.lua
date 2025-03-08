@@ -25,6 +25,6 @@ return {
                 },
             },
         })
-        vim.keymap.set('n', '<leader>ct', cloak.toogle, { desc = 'Cloak toogle' })
+        vim.keymap.set('n', '<leader>ct', cloak.toggle, { desc = 'Cloak toggle' })
     end
 }
