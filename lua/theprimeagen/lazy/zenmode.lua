@@ -1,4 +1,3 @@
-
 return {
     "folke/zen-mode.nvim",
     config = function()
@@ -6,7 +5,7 @@ return {
             require("zen-mode").setup {
                 window = {
                     width = 110,
-                    options = { }
+                    options = {}
                 },
             }
             require("zen-mode").toggle()
@@ -14,14 +13,14 @@ return {
             vim.wo.number = true
             vim.wo.rnu = true
             ColorMyPencils()
-        end)
+        end, { desc = "zen-mode: level 1" })
 
 
         vim.keymap.set("n", "<leader>zZ", function()
             require("zen-mode").setup {
                 window = {
                     width = 80,
-                    options = { }
+                    options = {}
                 },
             }
             require("zen-mode").toggle()
@@ -30,8 +29,6 @@ return {
             vim.wo.rnu = false
             vim.opt.colorcolumn = "0"
             ColorMyPencils()
-        end)
+        end, { desc = "zen-mode: level 2" })
     end
 }
-
-
