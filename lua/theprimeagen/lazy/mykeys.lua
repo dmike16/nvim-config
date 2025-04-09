@@ -5,7 +5,6 @@ return {
     },
     name = "mykeys",
     config = function()
-        vim.g.mykeys_log_level = "info"
         local mykeys = require('mykeys');
 
         mykeys.setup()
