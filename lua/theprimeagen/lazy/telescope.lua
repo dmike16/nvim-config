@@ -5,12 +5,14 @@ return {
 
     dependencies = {
         "nvim-lua/plenary.nvim",
-        'jonarrien/telescope-cmdline.nvim',
+        "jonarrien/telescope-cmdline.nvim",
+        "mykeys"
     },
 
     config = function()
         require('telescope').setup({})
         require('telescope').load_extension("cmdline")
+        require("telescope").load_extension("mykeys")
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>pf', builtin.find_files, {desc='Telescope find files'})
@@ -31,6 +33,7 @@ return {
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {desc='Telescope help tags'})
         vim.keymap.set('n', '<leader>pb', builtin.buffers, {desc='Telescope buffers'})
         vim.keymap.set('n', '<leader>q',':Telescope cmdline<CR>', { noremap = true, desc = "Cmdline" })
+        vim.keymap.set('n', '<leader>mmk',':Telescope mykeys<CR>', { noremap = true, desc = "mykeys ext" })
     end
 }
 
